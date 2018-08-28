@@ -1,7 +1,7 @@
 Name: GitFetch
 Version: 1.0.0
 Summary: Perceptlabs Assignment
-Home-page: http://code.google.com/p/ntplib/
+Home-page: https://github.com/ymunawwer/perceptlabs/
 Author: Yaseen Munawwer
 Author-email: munawwer@hotmail.co.uk
 ===========================================================================
