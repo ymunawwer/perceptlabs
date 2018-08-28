@@ -1,0 +1,33 @@
+
+       <input type="text" [(ngModel)]="term" placeholder="Search">
+         
+
+      
+    
+
+
+<ul class="content">
+      <li *ngFor="let item of collection1 | filter:term  | paginate: { itemsPerPage: 10, currentPage: p}">
+     <mat-card class="card">
+      <mat-card-header >
+         <div mat-card-avatar class="header-image"><img src="{{item.avatar_url}}.png"/></div>
+         <div class="user-title">
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.login}}</mat-card-subtitle>
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+
+          <p class=detail><span id="label">Company Name:</span>{{item.company}}</p>
+          <p class=detail><span id="label">Location:</span>{{item.location}}</p>
+          <p class=detail><span id="label">Followers:</span>{{item.followers}}</p>
+          <p class=detail><span id="label">Repository#:</span>{{item.public_repos}}</p>
+          
+                
+                </mat-card-content>
+              </mat-card>
+
+   <!--     </li> -->
+    </ul>
+               
+    <pagination-controls (pageChange)=" pageChanged($event)" class="paginate"></pagination-controls>

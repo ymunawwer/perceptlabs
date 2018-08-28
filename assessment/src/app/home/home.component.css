@@ -1,0 +1,97 @@
+.card {
+	margin-left: 300px;
+  max-width: 600px;
+  margin-top: 30px;
+  background-color: #ECEFF1;
+}
+
+
+ul{
+	list-style: none;
+}
+img{
+		width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-size: cover;
+}
+.user-title{
+margin-left: 70px;
+}
+.user-title mat-card-title {
+	text-align: left;
+	font-size: 22px;
+	font-weight: bold;
+	color: #212121;
+}
+
+.user-title mat-card-subtitle {
+	text-align: left;
+	margin-top: -15px;
+	color:#607D8B;
+	font-size: 14px;
+}
+mat-card-content{
+	margin-left: 125px;
+	text-align: left;
+}
+#label{
+	font-weight: bold;
+}
+
+pagination-controls{
+	position: fixed;
+	top: 728px;
+	z-index: 1000;
+
+}
+input[type=text] {
+    position: fixed;
+  z-index: 100000;
+  top:30px; 
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  
+width: 20%;
+  background: #f1f1f1;
+  -webkit-transition: width,height 2s;
+  transition: width,height 2s;
+}
+input[type=text]:focus {
+width: 21%;
+height:25px;
+
+
+
+}
+.content{
+	margin-top: 130px;
+}
+.notification{
+	font-weight: bold;
+}
+.item-name{
+	font-size: 20px;
+}
+.footer{background-color: #37474f;
+} 
+
+.footer .footer-button-previous{
+	font-size: 18px;
+	color:#fff;
+	padding-top: 18px;
+	padding-left:80px;
+	
+
+
+}
+.footer .footer-button-next{
+	font-size: 18px;
+	color:#fff;
+	padding-top: 18px;
+	padding-left: 150px;
+	
+	
+
+}

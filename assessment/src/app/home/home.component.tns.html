@@ -1,0 +1,53 @@
+<ActionBar android:title="Assessment">
+    
+    <ActionItem text="Item" ios.position="right" android.position="popup"></ActionItem>
+  
+    <ActionItem ios.systemIcon="12" android.systemIcon="ic_menu_search" (onTap)="onSearchTap()"></ActionItem>
+    <NavigationButton icon="res://ic_arrow_back_black_24dp" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+
+<GridLayout rows="50,*, 50">
+
+<SearchBar row="0" hint="Search" [text]="searchPhrase" (textChange)="onTextChanged($event)" (submit)="onSubmit($event)" (clear)="onClear($event)"
+             textFieldBackgroundColor="#ECEFF1" textFieldHintColor="#37474F" ></SearchBar>
+
+<ListView [items]="myItems" row="1">
+    <ng-template let-item="item" let-i="index">
+       
+            
+               <CardView class="cardStyle" margin="10" elevation="10" radius="1" height="150" >
+                <StackLayout orientation="vertical" >
+                <StackLayout orientation="horizontal">
+                  
+            <Image [src]="item.avatar_url" height="110dp" width="90dp"> </Image>
+
+            <StackLayout orientation="vertical" class="cart-item-description" style="padding-left: 12dp;padding-top: 8dp; ">
+             
+              <Label text="{{item.name}}" class="item-name" style="font-weight: bold;"></Label>
+              <Label text="{{item.login}}" style="color:#D50000; "></Label>
+             <StackLayout orientation="horizontal"><Label text="Company : " class="notification"></Label> <Label text="{{item.company}}"></Label></StackLayout>
+              <StackLayout orientation="horizontal"><Label text="Location : " class="notification"></Label><Label text="{{item.location}}"></Label></StackLayout>
+             <StackLayout orientation="horizontal"><Label text="Followers : " class="notification"></Label> <Label text="{{item.followers}}" ></Label></StackLayout>
+              <StackLayout orientation="horizontal"><Label text="Repository : " class="notification"></Label>  <Label text="{{item.public_repos}}"></Label>
+              </StackLayout>
+            </StackLayout>
+            
+</StackLayout>
+</StackLayout>
+</CardView>
+</ng-template>
+</ListView>
+
+
+<StackLayout orientation="horizontal" row=2 class="footer">
+  <Label text="Previous" class="footer-button-previous" (ontap)="onTapPrevious()"></Label>
+  <Label text="{{p}}" class="footer-button-next" (ontap)="onTapNext()"></Label>
+    <Label text="Next" class="footer-button-next" (ontap)="onTapNext()"></Label>
+
+</StackLayout>
+
+
+</GridLayout>
+
+
+
